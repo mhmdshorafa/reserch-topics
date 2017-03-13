@@ -14,7 +14,7 @@ Therefore Basic Authentication should generally only be used where transport lay
 
 ### Let's look at an example of how to use hapi-auth-basic.
 
-```
+```js
 'use strict';
 
 const Bcrypt = require('bcrypt');
