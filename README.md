@@ -77,3 +77,30 @@ server.register(Basic, (err) => {
   });
 });
 ```
+
+# Validation
+
+ Data validation is the process of ensuring that a program operates on clean, correct and useful data. It uses routines, often called "validation rules" "validation constraints" or "check routines", that check for correctness, meaningfulness, and security of data that are input to the system. A Validation rule is a criterion or constraint used in the process of data validation, carried out after the data has been encoded onto an input medium and involves a data vet or validation program.
+
+### List of criteria :
+Size.
+The number of characters.
+
+Format checks
+Data must conform to a specified format.
+
+Consistency.
+Codes in the data items which are related in some way can thus be checked for the consistency of their relationship.
+
+### Validation methods
+
+Data type checks
+
+Logic check
+Checks that an input does not yield a logical error, e.g., an input value should not be 0 when it will divide some other number somewhere in a program
+
+File existence check
+Checks that a file with a specified name exists. This check is essential for programs that use file handling.
+
+Format or picture check
+Checks that the data is in a specified format (template)
