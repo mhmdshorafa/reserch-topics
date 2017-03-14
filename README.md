@@ -131,3 +131,28 @@ config: {
 }
 });
 ```
+# Templating with helper functions 
+
+first we have to configure at least one templating engine on the server "server.views"
+we load the "vision" module as a plugin. It adds template rendering support to hapi.
+we register the handlebars module as the engine responsible for rendering templates with an extension of .html.
+
+There are many options available to the views engine in hapi.
+Note that all options may be set either globally, which configures them for all registered engines, or local to one specific engine, for example:
+```js
+server.views({
+    engines: {
+        'html': {
+            module: require('handlebars'),
+            compileMode: 'sync' // engine specific
+        }
+    },
+    compileMode: 'async' // global setting
+});
+```
+By default, hapi assumes that template engines are synchronous (i.e. compileMode defaults to sync), to use an asynchronous engine you must set compileMode to async.
+
+# View helpers
+
+helpersPath: the directory that contains your template helpers.
+JavaScript modules located in the defined helpersPath are available in templates.
